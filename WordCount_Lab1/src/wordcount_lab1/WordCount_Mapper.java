@@ -15,6 +15,8 @@ import org.apache.hadoop.mapreduce.Mapper;
  *
  * @author pratik
  */
+
+// THis is Mapper Class
 public class WordCount_Mapper extends Mapper<Object, Text, Text, IntWritable> {
 
     private final static IntWritable one = new IntWritable(1);
