@@ -33,14 +33,12 @@ public class WordCount_Lab1 {
         job.setMapperClass(WordCount_Mapper.class);
         job.setCombinerClass(WordCount_Reducer.class);
         job.setReducerClass(WordCount_Reducer.class);
+       
         job.setOutputKeyClass(Text.class);
         job.setOutputValueClass(IntWritable.class);
-        
         FileInputFormat.addInputPath(job, new Path(args[0]));
         FileOutputFormat.setOutputPath(job, new Path(args[1]));
-        System.exit(job.waitForCompletion(true)? 0 : 1 );
-        
-        
+        System.exit(job.waitForCompletion(true)? 0 : 1 );  
     }
     
 }
